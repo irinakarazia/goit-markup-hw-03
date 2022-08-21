@@ -1,3 +1,11 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
 :root {
     --primary-text-color: #212121;
     --secondary-text-color: #757575;
@@ -25,7 +33,6 @@ ul {
 .link {
     text-decoration: none;
 }
-
 
 .list {
     list-style: none;
@@ -61,6 +68,7 @@ cursor: pointer;
     height: 80px;
     padding-top: 24px;
     padding-bottom: 25px;
+    border: 1px solid #ECECEC;
    }
 .page-header-container {
     display: flex;
@@ -91,9 +99,7 @@ cursor: pointer;
 .accent {
     color: var(--accent-color);
 }
-.menu-item {
-    
-}
+
 .menu-link {
        font-weight: 500;
         line-height: 1.14;
@@ -144,24 +150,29 @@ color: var(--accent-color);
     background-color:var(--primary-background-color);
     }
 .hero-title {
-         font-weight: 900;
+    width: 693px;
+    margin-left: auto;  
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    font-weight: 900;
         font-size: 44px;
         line-height: 1.36;
         text-align: center;
         letter-spacing: 0.06em;
         text-transform: uppercase;
         color: var(--primary-white-color);
-        margin-bottom: 30px;
-       
-           }
+      }
 
 .modal-open-button {
     display: inline-block;
+    width: 216px;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+        
     border: 1px solid transparent;
     border-radius: 4px;
-    padding: 10px 32px;
-    min-width: 216px;
-   
     align-items: center;
     font-family: inherit;
     font-weight: 700;
@@ -178,12 +189,14 @@ color: var(--accent-color);
     background-color: #188CE8;
 }
                     /*Особливості*/
+ 
 .feature-list {
     display: flex;
     column-gap: 30px;
    }
+
 .feature-list-item {
-    flex-basis: calc ( (100%-90) / 4);
+     flex-basis: calc ( ( 100% - 90 ) / 4 );
 }
 .feature-list-title {
         font-size: 14px;
@@ -197,12 +210,12 @@ color: var(--accent-color);
 }
                 /*Чим займаємось*/
 .speciality {
-   
+   padding-top: 0;
 }
 
  .speciality-list {
     display: flex;
-    column-gap: 30px;
+    gap: 30px;
 }
 .speciality-list-item {
     flex-basis: calc ( (100%-60) / 3);
@@ -216,16 +229,21 @@ color: var(--accent-color);
     }
 
                  /*Команда*/
-.team-list {
+.team {
+    background-color: #F5F4FA;
+}
+ .team-list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 30px;
+    gap: 30px;
    }
 .team-member {
     width: 270px;
-    flex-basis: calc ( (100%-90) / 4);
+    flex-basis: calc ( ( 100% - 90 ) / 4);
+    background-color: var(--primary-white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
-
 .team-member-title {
 font-weight: 500;
     font-size: 16px;
@@ -233,7 +251,6 @@ font-weight: 500;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 10px;
-
   }
 .team-member-job {
     font-size: 16px;
@@ -250,6 +267,8 @@ font-weight: 500;
     gap: 8px;
     justify-content: center;
     margin-bottom: 34px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 .portfolio-list {
@@ -261,13 +280,15 @@ font-weight: 500;
 
 .portfolio-project {
     width: 370px;
-    flex-basis: calc ((100%-60px) / 3 );
-    border-bottom: 1px #EEEEEE;
+    flex-basis: calc ( ( 100% - 60px ) / 3 );
+    border-bottom: 1px solid #EEEEEE;
+    background-color:var(--primary-white-color);
 }
 
 .portfolio-btn {
     display: flex;
-    border: 1px solid transparent;
+    align-items: center;
+    border-color:  transparent;
     border-radius: 4px;
     height: 38px;
     min-width: 103px;
@@ -287,7 +308,7 @@ font-weight: 500;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
-        text-align: center;
+    text-align: center;
     letter-spacing: 0.03em;
 }
 
